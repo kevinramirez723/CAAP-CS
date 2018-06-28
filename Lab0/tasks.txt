@@ -1,6 +1,7 @@
 Task 6
 git commit --amend which allows one to edit the most recent commit using their choice of a text editor.
 Discovered this command by using git commit --help which brings a list and discription of all git commit commands.
+
 commit SHA: c7e86ad4f1061b0cad9f64a6c9ad26f386bc1168
 commit message: Add --no-mouse option to replace FZF_MOUSE_ENABLED
 Able to locate using git log --grep='--no-mouse'
