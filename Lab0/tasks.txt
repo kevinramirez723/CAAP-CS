@@ -1,2 +1,3 @@
 Task 6
-git commit --amend which allows one to edit the most recent commit using their choice of a text editor. Discovered this command by using git commit --help which brings a list and discription of all git commit commands.
+git commit --amend which allows one to edit the most recent commit using their choice of a text editor.
+Discovered this command by using git commit --help which brings a list and discription of all git commit commands.
