@@ -9,3 +9,6 @@ Able to locate using git log --grep='--no-mouse'
 
 Task 8 (for real now)
 Used git diff to see changes made.
+
+Task 9
+Used rm mistake.txt to delete the file.
