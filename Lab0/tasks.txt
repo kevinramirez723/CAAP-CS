@@ -15,3 +15,5 @@ Used rm mistake.txt to delete the file.
 
 Task 10
 Used git revert mistakes followed by -git revert --continue in order to revert the mistakes while stilling keeping them in the git log.
+
+Every tasks completion was aided by -git --help and -git [insert needed command here] --help.
