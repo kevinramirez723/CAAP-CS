@@ -9,10 +9,11 @@ def main():
 	weeks = (days/7)			#calculates amount of weeks and stores
 	months = (weeks/4.34524)	#calculates amount of months and stores
 	years = (months/12)			#calculates amount of years and stores
-	print("minutes: ", minutes)	#each stored variable is printed consecutively in order calculated
-	print("hours: ", hours)
-	print("days: ", days)
-	print("weeks: ", weeks)
-	print("months: ", months)
-	print("years: ", years)
+	print(						#each stored variable is printed consecutively in order calculated
+	"minutes: ", round(minutes, 2),"\n"	
+	"hours: ", round(hours, 2),"\n"
+	"days: ", round(days, 2),"\n"
+	"weeks: ", round(weeks, 2),"\n"
+	"months: ", round(months, 2),"\n"
+	"years: ", round(years, 2))
 main()
