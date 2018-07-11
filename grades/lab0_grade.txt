@@ -1,0 +1,18 @@
+Task 1: 10 points
+Task 2: 5 points
+Task 3: 5 points
+Task 4:	5 points
+Task 5:	4 points
+	--> Missing "Hopefully our last change..." in test.txt
+Task 6: 5 points
+Task 7: 4 points
+	--> Sources? How/where did you find this command?
+Task 8: 5 points
+Task 9: 5 points
+Task 10: 10 points
+Task 11: 2 points
+Total: 60/60
+
+Make sure to cite or specify how you answered each question.
+
+Great job!
