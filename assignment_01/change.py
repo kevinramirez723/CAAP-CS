@@ -19,5 +19,5 @@ def main():
 	"dimes: ",units[7],"\n"
 	"nickels: ",units[8],"\n"
 	"pennies: ",round(change),"\n"
-	"total: ",total)									#all previous variables added together
+	"total: ",total)
 main()
