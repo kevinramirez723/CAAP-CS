@@ -1,6 +1,302 @@
 @charset "UTF-8";
 
-/* Last edit: 2/18/2018 8:00 PM */
-/* Last validated error free: 2/18/2018 9:27 PM */
+/* Last edit: 7/12/2018 6:11 AM */
+/* Last validated error free: 7/12/2018 6:11 AM */
 
-/* Cite code */
+
+/* NAVIGATION HEADER ---------------------------------------------*/
+ul {
+    list-style-type: none;
+	z-index: 1;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #003366;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+
+li {
+    float: left;
+	border-right: 1px solid #000036;
+}
+
+/* Text details */
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Removes right border, adds left border, and pushes "about" to the very left */
+li:last-child {
+    border-right: none;
+	border-left: 2px solid #000036;
+	float:right;
+}
+
+/* Change the header link colors to black on hover */
+li a:hover {
+    background-color: #111;
+}
+
+/* BODY AND TEXT ----------------------------------------------------*/
+body {
+	margin: 0;
+	font-family: "Times New Roman";
+	font-size: 100%; /* 16px */
+}
+
+#imgbg {
+	width: 100%;
+}	
+
+/* Centered image text */
+.centered {
+    position: absolute;
+	text-shadow: 3px 3px 1px grey;
+    top: 35%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 28px;
+	color: #003366;
+}
+
+h2 {
+	margin: 10px 120px 10px 120px;
+	text-decoration: underline
+}
+
+h3 {
+	margin: 10px 200px 10px 200px;
+}
+
+h4{
+	margin: 10px 5px 5px 50px;
+	color: white;
+}
+
+p {
+	margin: 10px 200px 10px 200px;
+	font-size: 12pt;
+	line-height: 1.6;
+}
+
+/* FOOTER -------------------------------------------------------------*/
+#sitefooter {
+	height: 100px;
+	background: #003366;
+}
+
+#footerwords {
+	color: white;
+	margin: 10px 120px 10px 120px;
+}
+
+/* REGARDING IMAGES WIP-------------------------------------------------*/
+.row{
+	width: 100%;
+	height: 191px;
+	border: none;
+	margin: 0;
+	background: radial-gradient(#111, #000036);
+}
+
+.row2{
+	width: 100%;
+	height: 119px;
+	border: none;
+	margin: 0;
+	background: radial-gradient(#111, #000036);
+}
+
+.row3{
+	width: 100%;
+	height: 154px;
+	border: none;
+	margin: 0;
+	background: radial-gradient(#111, #000036);
+}
+
+.row4{
+	width: 100%;
+	height: 174px;
+	border: none;
+	margin: 0;
+	background: radial-gradient(#111, #000036);
+}
+
+.row5{
+	width: 100%;
+	height: 194px;
+	border: none;
+	margin: 0;
+	background: radial-gradient(#111, #000036);
+}
+
+.row6{
+	width: 100%;
+	height: 194px;
+	border: none;
+	margin: 0;
+	background: radial-gradient(#111, #000036);
+}
+
+.row7{
+	width: 100%;
+	height: 170px;
+	border: none;
+	margin: 0;
+	background: radial-gradient(#111, #000036);
+}
+
+.column{
+	height: 90%;
+	float: left;
+	padding: 5px;
+}
+
+/* ABOUT PAGE -------------------------------------------------------------*/
+.centered2 {
+    position: absolute;
+	text-shadow: 1px 1px 1px grey;
+    top: 25%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+	color: #003366;
+}
+
+#me {
+	border-radius: 10%;
+	width: 20%;
+	transform:rotate(90deg);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 230px;
+}
+
+.bubble {
+	position: relative;
+	width: 400px;
+	height: 400px;
+	background-color: #003366;
+	border-radius: 40%
+}
+
+/* BUBBLE BODY ----------------------------------------------------------------*/
+#bubble1 {
+	margin-left: 200px;
+	margin-top: -350px;
+}
+
+#bubble2 {
+	margin-left: 275px;
+	margin-top: 0px;
+}
+
+#bubble3 {
+	float: right;
+	margin-right: 275px;
+	margin-top: -425px;
+}
+
+#bubble4 {
+	float: right;
+	margin-right: 200px;
+	margin-top: -860px;
+}
+
+/* BUBBLE HEADERS ----------------------------------------------------------------*/	
+#bh1 {
+	margin: 0;
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+#bh2 {
+	margin: 0;
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+#bh3 {
+	margin: 0;
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+#bh4 {
+	margin: 0;
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+#b1 {
+	margin: 0;
+	padding-left: 50px;
+	position: relative;
+	text-align: left;
+	color: white;
+}
+
+/* BUBBLE TEXT -----------------------------------------------------------------------*/
+#b2_1 {
+	margin: 0;
+	padding-left: 50px;
+	position: relative;
+	text-align: left;
+	color: white;
+	line-height: 1;
+	font-size: 10pt;
+}
+
+#b2_2 {
+	margin: 0;
+	padding-left: 50px;
+	position: relative;
+	text-align: left;
+	color: white;
+	line-height: 1;
+	font-size: 10pt;
+}
+
+#b2_3 {
+	margin: 0;
+	padding-left: 50px;
+	position: relative;
+	text-align: left;
+	color: white;
+	line-height: 1;
+	font-size: 10pt;
+}
+
+#b3 {
+	margin: 0;
+	padding-left: 50px;
+	position: relative;
+	text-align: left;
+	color: white;
+	line-height: 1;
+}
+
+#b4 {
+	margin: 0;
+	padding-left: 50px;
+	position: relative;
+	text-align: left;
+	color: white;
+}
+
+/*Citations ------------------------------------------------------------------------------
+
+https://www.w3schools.com
+HTML5 and CSS3 (7th Edition) PDF provided by Jose a few weeks prior*/
