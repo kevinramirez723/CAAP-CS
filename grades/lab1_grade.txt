@@ -1,0 +1,41 @@
+Lab 1
+CAAP CMSC 101, Summer 2018
+
+Required Elements/Attributes
+  Correct use           3/3
+  Used all              3/3
+  Balanced amount       3/3 
+
+Semantic markup
+  Well structured hierarchies    20/20
+
+Correct use of directories/files
+  Links                 4/5
+  In docs directory     5/5
+  Git sites works       10/10
+
+Validation
+  Both pages and stylesheets  20/20
+
+Design/CSS
+  Dynamic screen size    4/5
+  Efficient use of CSS on multiple pages     10/10
+  Professional design in both pages  5/5
+  
+
+Code style
+  format         3/3 (* code looks good *)
+  clarity        3/3 (* logic is expressed clearly *)
+  decomposition  3/3 (* problems are factored into sensible subproblems *)
+  efficiency     2/2 (* blatant inefficiencies are avoided *)
+
+_total-score_  98/100
+
+graded by Jose Reyes
+
+Comments:
+- Very neat code!
+- Consider validating ALL of your pages if you will have more than the required.
+- The site doesn't look very good in smaller screens. Consider changing the styles for such devices
+- some of you links are incorrect because they are not relative to the docs directory, git will ignore this and they will work there, but anywhere else, like in my computer they links are broken.
+    --> e.g./CAAP-CS/styles/style.css should be /styles/style.css
