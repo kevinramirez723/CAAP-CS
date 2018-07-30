@@ -31,29 +31,31 @@ def make_matrix():   #1, 2, 3, 5, 6, 7, 9,10,11,13,15,16
 
 # takes two matrices and multiplies them returning the resulting matrix
 def matrixmult(state, initial_matrix, t_matrix):
+
+
 	#while update_matrix[11] < 1:
-	for i in range(len(initial_matrix)):
-		updated_matrix = []
-		initial_matrix[i] = 1
-		if i > 0:
-			initial_matrix[i-1] = 0
-		for j in range(len(initial_matrix)):
-			updated_sum = 0
-			state[0]["moves"] += 1
-			for k in range(len(initial_matrix)):
-				updated_sum += initial_matrix[k] * t_matrix[j][k]
-			updated_matrix.append(updated_sum)
-		print(i+1, updated_matrix)
+	state[0]["moves"] += 1
+	#for i in range(len(initial_matrix)):
+	updated_matrix = []
+	#initial_matrix[i] = 1
+	#if i > 0:
+		#initial_matrix[i-1] = 0
+	for j in range(len(initial_matrix)):
+		updated_sum = 0
+		for k in range(len(initial_matrix)):
+			updated_sum += initial_matrix[k] * t_matrix[k][j]
+		updated_matrix.append(updated_sum)
+	print(updated_matrix)
 		 
 
 
 # given a state matrix, and a transition matrix, runs a markov simulation of the game and returns average number of moves.  
 def markov_simulation(state):
-	s = 0
+	sim = 0
 	state.append({"player" : 1, "position" : 1, "moves" : 0})
 	print("Simulates 4x4 board with ladders 4:7 and 8:15 and chutes at 12:2 and 14:6.")
 	initial_matrix, t_matrix = make_matrix()
 	matrixmult(state, initial_matrix, t_matrix)
 	#from lab3 import gb_checker
-	#gameboard = gb_checker(s)
+	#gameboard = gb_checker()
 	
