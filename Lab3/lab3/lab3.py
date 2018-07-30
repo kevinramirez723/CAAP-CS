@@ -78,9 +78,9 @@ def gb_checker():
 
 #Checks if a given square is a chute or ladder and adjusts the player's position accordingly.
 #If not then the their new position is simply the dice roll added to their current position.
-#Once a player reaches or passes the last space the game ends (variable x breaks the loop).
+#Once a player reaches or passes the last space the game ends (variable stop breaks the loop once it returns false).
 #The variable sim checks whether cl_checker is being run by either multiplayer or simulation mode(sim mode turns off most of the dialogue).
-def cl_checker(state, modcount, gameboard, x, sim):
+def cl_checker(state, modcount, gameboard, stop, sim):
 	if state[modcount]["position"] in ladders:		#If current player's position is in the dictionary containing the ladder spaces the player is moved up.
 		state[modcount]["position"] = ladders[state[modcount]["position"]]
 		if sim == 0:
@@ -91,20 +91,21 @@ def cl_checker(state, modcount, gameboard, x, sim):
 			print("Player {} has hit a space with a chute and is now on space {}!".format(modcount+1, state[modcount]["position"]))
 	if state[modcount]["position"] >= len(gameboard):
 		print("Congrats Player {} you won in {} move(s)!".format(modcount+1, state[modcount]["moves"]))
-		x = False
+		stop = False
 	else:
 		if sim == 0:
 			print("Player {} has ended their turn on space {}.\n".format(modcount+1, state[modcount]["position"]))
-	return x
+	return stop
 
-#Runs the game and begins by asking for the amount of players.
+
+#Runs the game in multiplayer mode and begins by asking for the amount of players.
 def multiplayer(state):
 	sim = 0
 	state, n_players = p_checker(state)
 	gameboard = gb_checker()
 	count = 0															#Counter used to cycle through players by applying mod base (amount of players).
-	x = True
-	while x == True:													#Game ends once chutes & ladders checker returns x as False which only happens once someone passes or lands on the final space.
+	stop = True
+	while stop == True:													#Game ends once chutes & ladders checker returns stop as False which only happens once someone passes or lands on the final space.
 		modcount = count % n_players
 		if modcount == 0:
 			print("\nTurn:", state[modcount]["moves"]+1)				#Turn number is announced only once everyone has had their turn.
@@ -114,10 +115,10 @@ def multiplayer(state):
 		print("You rolled a:", die)
 		state[modcount]["position"] += die								#Updates position of particular player by adding the dice roll to it (This value is then updated if space landed on is a chute or ladder.
 		state[modcount]["moves"] += 1									#Specified player's amount of moves is then updated.
-		x = cl_checker(state, modcount, gameboard, x, sim)				#Calls all the conditional statements.
+		stop = cl_checker(state, modcount, gameboard, stop, sim)		#Calls all the conditional statements.
 		count += 1														#Counter is incremented by 1.
 
-		
+
 #Runs the game as a simulation and keeps track of the number of moves it takes to win and returns average.
 def simulate_game(state):
 	sim = 1
@@ -129,17 +130,17 @@ def simulate_game(state):
 		state[0]["moves"] = 0
 		state[0]["position"] = 1
 		count = 0														#Counter used to cycle through players by applying mod base (amount of players).
-		x = True
-		while x == True:												#Game ends once chutes & ladders checker returns x as False which only happens once someone passes or lands on the final space.
+		stop = True
+		while stop == True:												#Game ends once chutes & ladders checker returns stop as False which only happens once someone passes or lands on the final space.
 			die = roll_die()
 			state[0]["position"] += die									#Updates position of particular player by adding the dice roll to it (This value is then updated if space landed on is a chute or ladder.
 			state[0]["moves"] += 1										#Specified player's amount of moves is then updated.
-			x = cl_checker(state, 0, gameboard, x, sim)						#Calls all the conditional statements.
+			stop = cl_checker(state, 0, gameboard, stop, sim)			#Calls all the conditional statements.
 			count += 1													#Counter is incremented by 1.
 		movesum += state[0]["moves"]
 	ave_moves = movesum / n_sims
 	print("Average moves for win conditions to be met of {} simulations on a gameboard of {} tiles is: {}".format(n_sims, len(gameboard), round(ave_moves, 3)))
-	
+
 
 
 #Function to make and play a game. Gives choice to what game type shall be started.
@@ -150,20 +151,17 @@ def play_game():
 		if mode == "multiplayer":
 			multiplayer(state)	
 			break
-			
+
 		elif mode == "simulation":
 			simulate_game(state)
 			break
 
 		elif mode == "markov model":
-			matrix.markov_simulation(state)
+			matrix.markov_simulation()
 			break
 
 		else:
 			print("Try again, invalid input.\n")
 
-if __name__ == "__main__":
+if __name__ == "__main__":		#Will only execute if run by this module.
     play_game()
-
-
-
