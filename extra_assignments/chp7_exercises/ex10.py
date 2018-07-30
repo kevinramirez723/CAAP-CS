@@ -7,7 +7,7 @@ def main():
 			year = int(input("Year between 1900-2099? "))
 			while year < 1900 or year > 2099:								#Another loop this time to check if the value is in between the given range of years.
 				year = int(input("Try again, year is outside of range.\n\n"
-									"Year between 1900-2099? "))
+								 "Year between 1900-2099? "))
 			break	
 
 		except ValueError:
